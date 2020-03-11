@@ -28,6 +28,8 @@
     return retorno;
   };
 
+  data.version = '1.0Alpha';
+
   /**
    * Función iteradora para el almacenaje de la data.
    * @param {NodeList} nodes Lista de nodos
