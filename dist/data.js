@@ -1,7 +1,7 @@
 (function (root) {
   const dataNodes = new Map();
-
   const data = function (node, name, value) {
+    let retorno;
     if (name !== undefined) {
       if (!dataNodes.has(node)) dataNodes.set(node, new Map());
       const dataNode = dataNodes.get(node);
@@ -17,14 +17,14 @@
     return retorno;
   };
 
-  data.version = '1.0Alpha';
+  data.version = '1.0Beta';
 
   const dataEach = function (nodes, name, value) { 
     return Array.prototype.map.call(nodes, function (item) {
       return item.data(name, value);
     });
   };
-
+  
   HTMLElement.prototype.data = function (name, value) {
     return data(this, name, value);
   };
