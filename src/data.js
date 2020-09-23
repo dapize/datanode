@@ -11,6 +11,7 @@
    * @param {String|Boolean|Object|Array|Function} value Valor de la data
    */
   const data = function (node, name, value) {
+    let retorno;
     if (name !== undefined) {
       if (!dataNodes.has(node)) dataNodes.set(node, new Map());
       // getting the value of the data called...
@@ -28,7 +29,7 @@
     return retorno;
   };
 
-  data.version = '1.0Alpha';
+  data.version = '1.0Beta';
 
   /**
    * Función iteradora para el almacenaje de la data.
